@@ -1,0 +1,73 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Schedule.master.cs" Inherits="SiteMaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head runat="server">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>MISGA Sign Up</title>
+        <!--
+            <link href="styles/Site.css" rel="Stylesheet" type="text/css" media="screen" />
+        -->
+<link href="Styles/style2.css" rel="stylesheet" type="text/css" media="screen"/>
+<link href="styles/print.css" rel="stylesheet" type="text/css" media="print" />
+<link rel="shortcut icon" href="http://misga-signup.org/favicon.ico" /> 
+<asp:ContentPlaceHolder id="HeadContent" runat="server">
+</asp:ContentPlaceHolder>
+</head>
+
+<body>
+
+<form id="form1" runat="server">
+
+
+<div id="container">
+	<!-- Begin Masthead -->
+	<div id="masthead">
+        <h1>
+            <%=clubSettings.ClubInfo.ClubName %><br />Schedule
+        </h1>
+
+	</div>
+	<div id="print-hdr">
+	<h1>MISGA Sign Up</h1></div>
+	<!-- End Masthead -->
+	<!-- Begin Navigation -->
+
+	<div id="navigation">
+		    <asp:Menu ID="Menu1" runat="server">
+                <Items>
+                    <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Home" Value="Home"></asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="~/schedule.aspx" Text="Schedule" Value="Schedule"></asp:MenuItem>
+                </Items>
+            </asp:Menu>
+	</div>
+	<!-- End Navigation -->
+	<div id="page_content">
+	<asp:ContentPlaceHolder id="MainContent" runat="server">
+	</asp:ContentPlaceHolder>
+	</div>  <!-- page_content -->
+		<div id="footer">
+            <asp:Menu ID="Menu2" runat="server" Orientation="Horizontal">
+                <Items>
+                    <asp:MenuItem NavigateUrl="~/Default.aspx" Text="[Home]" Value="Home"></asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="~/schedule.aspx" Text=" [Schedule]" Value="Schedule"></asp:MenuItem>
+                </Items>
+            </asp:Menu>
+            <br />
+		</div>
+	<!-- End Footer -->
+	</div>  <!-- Container -->
+	<div id="copyright">
+	<p>Version: 15.01.13 - Last modified 
+        <script type="text/javascript">
+//            document.write(document.lastModified);
+        </script>
+
+               January 13, 2015
+
+					<br />
+		&copy Copyright 2011, 2012, 2013, 2014 & 2015 by Thomas M. Rowlett, All Rights Reserved</p>
+		</div>
+	</form>
+</body>
+</html>
